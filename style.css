@@ -36,6 +36,7 @@ body{
 .navbar .menu a {
   text-decoration: none;
   color: aliceblue;
+  naju sapatona adoro vc ass dada
 } */
 
 
@@ -68,8 +69,17 @@ body{
   font-size: 28pz;
 }
 
+
 .secondary_notice{
-  margin:10px
+  margin: 5px;
+}
+
+.secondary_notice .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 
@@ -86,6 +96,8 @@ body{
 .notices img{
   width: 100%;
   height: auto;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .notices{
