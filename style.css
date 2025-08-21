@@ -1,20 +1,94 @@
-body {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   font-family: "Times New Roman", Times, serif;
 }
 
-p{
-    font-size: 20px;
-    text-align: center;
+body{
+  background-color: #222;
 }
 
-li {
-  display: inline;
+.logo{
+  font-size: 3rem;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
 }
 
-img{
-    width: 50%;
+.navbar{
+  display: flex;
+  height: 95px;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1E1E1E;
 }
 
-h1{
-    text-align: center;
+/* .navbar .menu{
+  list-style: none;
+  display: flex;
 }
+
+.navbar .menu li{
+  margin-right: 1.5rem;
+}
+
+.navbar .menu a {
+  text-decoration: none;
+  color: aliceblue;
+} */
+
+
+/* MAIN */
+.notices{
+  max-width: 1250px;
+  padding-top: 1.5em;
+  margin: 0 auto;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(3, 1fr)
+} 
+
+.principal_notice{
+  grid-column: 1/4;
+  margin: 5px;
+  padding: 5px;
+}
+
+.principal_notice img{
+  max-height: 800px;
+}
+
+
+.principal_notice h2{
+  font-size: 36px;
+}
+
+.secondary_notice h2{
+  font-size: 28pz;
+}
+
+.secondary_notice{
+  margin:10px
+}
+
+
+@media(max-width:800px) {
+  .principal_notice{
+    grid-column:1;
+  }
+  .notices{
+    grid-template-columns: 1fr;
+    margin: auto 15px;
+  }
+}
+
+.notices img{
+  width: 100%;
+  height: auto;
+}
+
+.notices{
+  color: aliceblue 
+}
+
