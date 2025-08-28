@@ -2,105 +2,109 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Times New Roman"
 }
 
 body{
-  background-color: #222;
+  background-color: #0d0d0d;;
+  color: #e0e0e0;
 }
 
-.logo{
-  font-size: 3rem;
+.logo {
+  font-size: 2.5rem;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: #e6e6e6;
+  font-weight: bold;
 }
 
-.navbar{
+.navbar {
   display: flex;
-  height: 95px;
   justify-content: center;
   align-items: center;
+  height: 95px;
   padding: 1rem 2rem;
-  background-color: #1E1E1E;
+  background: linear-gradient(90deg, #181818 0%, #212121 100%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
-
-/* .navbar .menu{
-  list-style: none;
-  display: flex;
-}
-
-.navbar .menu li{
-  margin-right: 1.5rem;
-}
-
-.navbar .menu a {
-  text-decoration: none;
-  color: aliceblue;
-  naju sapatona adoro vc ass dada
-} */
-
 
 /* MAIN */
 .notices{
-  max-width: 1250px;
+  max-width: 90%;
   padding-top: 1.5em;
   margin: 0 auto;
   display: grid;
-  gap: 5px;
+  gap: 20px;
   grid-template-columns: repeat(3, 1fr)
 } 
 
-.principal_notice{
-  grid-column: 1/4;
-  margin: 5px;
-  padding: 5px;
-}
 
-.principal_notice img{
-  max-height: 800px;
-}
+.notice{
+  display: block;
+  position: relative;
+  background-color: #1e1e1e; 
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-
-.principal_notice h2{
-  font-size: 36px;
-}
-
-.secondary_notice h2{
-  font-size: 28pz;
 }
 
 
-.secondary_notice{
-  margin: 5px;
+.notice:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.secondary_notice .content{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 10px;
+.notice .title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    color: #fff;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    font-size: 1.5rem;
+    font-weight: lighter;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
+}
+
+
+.notice img{
+  height: 250px;
+  width: 100%;
+  object-fit: cover; 
+  display: block;
   border-radius: 5px;
 }
 
+.principal_notice{
+  grid-column: 1/4; 
+}
 
-@media(max-width:800px) {
+.principal_notice img{
+  height: 600px;
+}
+
+@media(max-width:992px) {
   .principal_notice{
     grid-column:1;
   }
   .notices{
     grid-template-columns: 1fr;
-    margin: auto 15px;
+    max-width: 80%;
+  }
+  .notice img {
+        height: 200px;
+    }
+
+  .principal_notice img {
+        height: 400px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .notices {
+        max-width: 90%;
   }
 }
-
-.notices img{
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-.notices{
-  color: aliceblue 
-}
-
